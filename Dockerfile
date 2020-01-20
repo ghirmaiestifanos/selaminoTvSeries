@@ -1,4 +1,5 @@
 FROM openjdk:alpine
-ADD target/selaminoTvSeries.jar ./
+VOLUME /tmp
+ADD target/selaminoTvSeries.jar /app/app.jar
 EXPOSE 8500
-ENTRYPOINT ["java","-jar","selaminoTvSeries.jar"]
+ENTRYPOINT ["java","-jar","/app/app.jar"]
