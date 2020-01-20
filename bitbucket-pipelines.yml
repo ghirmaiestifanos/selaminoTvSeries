@@ -1,9 +1,10 @@
-image: maven:3.6.1
-
+image: openjdk:8-jdk-alpine
 pipelines:
   default:
     - step:
-        caches:
-          - maven
-        script: # Modify the commands below to build your repository.
-          - mvn -B clean install # -B batch mode makes Maven less verbose
+        script:
+          - docker login -u bereketdeb1 -p Holly6263@
+          - docker build -t bereketdeb1/say-hello:latest .
+          - docker push bereketdeb1/say-hello:latest
+options:
+  docker: true
