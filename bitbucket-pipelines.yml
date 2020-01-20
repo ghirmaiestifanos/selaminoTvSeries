@@ -1,9 +1,9 @@
-image: openjdk:8-jdk-alpine
+image: maven:3.6.1
 pipelines:
   default:
     - step:
         script:
-          - docker login -u bereketdeb1 -p Holly6263@
+          - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
           - docker build -t bereketdeb1/say-hello:latest .
           - docker push bereketdeb1/say-hello:latest
 options:
