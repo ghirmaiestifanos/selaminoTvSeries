@@ -50,7 +50,7 @@ public class HelperClass {
 			
 			int numberOfColumns = rsMetaData.getColumnCount();
 			
-			for(int i = 1; i <numberOfColumns; i++){
+			for(int i = 1; i <=numberOfColumns; i++){
 				//System.out.println(numberOfColumns+" "+rsMetaData.getColumnLabel(i) );
 				if(rsMetaData.getColumnType(i) == 2){
 					link.put(rsMetaData.getColumnName(i).toUpperCase(), rs.getInt(rsMetaData.getColumnName(i)));
@@ -59,7 +59,7 @@ public class HelperClass {
 					link.put(rsMetaData.getColumnName(i).toUpperCase(), rs.getString(rsMetaData.getColumnName(i)));
 				}
 			}
-			//System.out.println(link.toString()+"link");
+			System.out.println(link.toString()+"link");
 			return link;
 		}
 
