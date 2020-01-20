@@ -4,7 +4,7 @@ pipelines:
     - step:
         script:
           - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-          - docker build -t bereketdeb1/say-hello:latest .
+          - docker build -t bereketdeb1/say-hello:latest . #test
           - docker push bereketdeb1/say-hello:latest
 options:
   docker: true
