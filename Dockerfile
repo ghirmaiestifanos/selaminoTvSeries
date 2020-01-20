@@ -1,4 +1,6 @@
 FROM openjdk:8-jdk-alpine
-ADD target/selaminoTvSeries.jar selaminoTvSeries.jar
+VOLUME /tmp
 EXPOSE 8500
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","selaminoTvSeries.jar"]
+ARG JAR_FILE=target/selaminoTvSeries.jar
+ADD ${JAR_FILE} selaminoTvSeries.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/selaminoTvSeries.jar"]
