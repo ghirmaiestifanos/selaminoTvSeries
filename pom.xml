@@ -138,7 +138,7 @@
 			    </configuration>
 			</plugin>
 		</plugins>
-		<finalName>selaminoTvSeries</finalName>
+		<finalName>selaminotvseries</finalName>
 	</build>
 
 	<repositories>
