@@ -32,7 +32,7 @@ public class TvSeriesDAO {
 	 private static final Logger LOG = LoggerFactory.getLogger(TvSeriesDAO.class);
 
 	public List<TvSeries> getTvSeriesList() {
-		String sql = "SELECT * from selamino.tvseries";
+		String sql = "SELECT * from tvseries";
 		List<TvSeries> list = (List<TvSeries>) jdbcTemplate.query(sql, new Object[]{}, new BeanPropertyRowMapper<TvSeries>(TvSeries.class)) ;
 		LOG.info("list of tv series returned are: "+ list.size());
 		return list;

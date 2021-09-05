@@ -1,10 +1,10 @@
 spring:
   application:
     name: tvSeries-selamino-service
-    
+
 server:
   port: 8300
-  
+
 eureka:
   client:
     service-url:
@@ -12,6 +12,5 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
   instance:
-    hostname: localhost 
-      
-      
+    hostname: localhost
+
